@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #131314;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.auth.AuthController">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" spacing="5.0">
+               <children>
+                  <Label text="Gamesplash" textFill="WHITE">
+                     <font>
+                        <Font name="Rage Italic" size="45.0" />
+                     </font>
+                  </Label>
+                  <Label text="A place where you challenge your spirit" textFill="WHITE">
+                     <font>
+                        <Font name="Raleway Italic" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="50.0" />
+               </VBox.margin>
+            </VBox>
+            <Label fx:id="auth_label" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Raleway Black" size="32.0" />
+               </font>
+            </Label>
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="365.0" prefWidth="345.0" spacing="13.0" style="-fx-background-color: #3B3B3B; -fx-background-radius: 15;">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="25.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <VBox prefHeight="45.0" prefWidth="301.0" spacing="5.0">
+                     <children>
+                        <Label text="Username" textFill="WHITE">
+                           <font>
+                              <Font name="Raleway Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="username" promptText="Enter your username" style="-fx-border-color: white; -fx-border-radius: 5; -fx-background-color: transparent; -fx-text-inner-color: white;">
+                           <font>
+                              <Font name="Raleway" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <Label fx:id="uname_error" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="297.0" text="error" textFill="#ff4747" textOverrun="CLIP" visible="false" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="10.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="30.0" layoutY="30.0" prefHeight="45.0" prefWidth="301.0" spacing="5.0">
+                     <children>
+                        <Label text="Password" textFill="WHITE">
+                           <font>
+                              <Font name="Raleway Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="password" promptText="Enter your password" style="-fx-border-color: white; -fx-border-radius: 5; -fx-background-color: transparent; -fx-text-inner-color: white;">
+                           <font>
+                              <Font name="Raleway" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </PasswordField>
+                        <Label fx:id="pass_error" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="297.0" text="error" textFill="#ff4747" textOverrun="CLIP" visible="false" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="10.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="30.0" layoutY="30.0" prefHeight="45.0" prefWidth="301.0" spacing="5.0">
+                     <children>
+                        <Label text="Port" textFill="WHITE">
+                           <font>
+                              <Font name="Raleway Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="client_port" promptText="Enter your port" style="-fx-border-color: white; -fx-border-radius: 5; -fx-background-color: transparent; -fx-text-inner-color: white;">
+                           <font>
+                              <Font name="Raleway" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <Label fx:id="port_error" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="297.0" text="error" textFill="#ff4747" textOverrun="CLIP" visible="false" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="10.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </VBox>
+                  <Button fx:id="auth_btn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#authenticate" style="-fx-background-color: #2E82DC;" text="login" textFill="WHITE">
+                     <font>
+                        <Font name="Raleway Black" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <HBox alignment="CENTER_LEFT" spacing="5.0">
+                     <children>
+                        <Label fx:id="auth_hint" text="Not Registered yet?" textFill="WHITE">
+                           <font>
+                              <Font name="Raleway" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="auth_hint_bold" onMouseClicked="#toggle" text="Signup" textFill="#2e82dc">
+                           <font>
+                              <Font name="Raleway ExtraBold Italic" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <effect>
+                  <DropShadow color="#0000007e" height="50.0" radius="24.5" width="50.0" />
+               </effect>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <top>
+      <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#close" style="-fx-background-color: transparent;" text="exit" textFill="WHITE" BorderPane.alignment="TOP_RIGHT">
+         <font>
+            <Font name="Raleway Black" size="12.0" />
+         </font>
+      </Button>
+   </top>
+</BorderPane>

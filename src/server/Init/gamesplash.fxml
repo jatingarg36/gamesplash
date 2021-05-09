@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: #131314;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="server.Init.Controller">
+    <center>
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <Label text="Gamesplash" textFill="WHITE">
+                <padding>
+                    <Insets left="10.0" right="10.0" />
+                </padding>
+                <font>
+                    <Font name="Rage Italic" size="45.0" />
+                </font>
+            <VBox.margin>
+               <Insets bottom="100.0" />
+            </VBox.margin>
+            </Label>
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #3B3B3B; -fx-border-radius: 1;" BorderPane.alignment="TOP_CENTER">
+                <children>
+                    <Label prefHeight="17.0" prefWidth="210.0" text="Port" textFill="WHITE">
+                        <font>
+                            <Font name="Raleway ExtraBold" size="12.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="server_port_input" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="223.0" promptText="Port" style="-fx-border-color: white; -fx-background-color: none; -fx-border-radius: 5; -fx-border-width: 2; -fx-text-inner-color: white;">
+                        <VBox.margin>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </VBox.margin>
+                        <font>
+                            <Font name="Raleway" size="15.0" />
+                        </font>
+                    </TextField>
+                    <Button fx:id="btn_start_server" mnemonicParsing="false" onAction="#startServer" prefHeight="25.0" prefWidth="224.0" style="-fx-background-color: #2E82DC;" text="Start Server" textFill="WHITE">
+                        <VBox.margin>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </VBox.margin>
+                        <font>
+                            <Font name="Raleway Black" size="12.0" />
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+
+                </children>
+                <BorderPane.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="100.0" />
+                </BorderPane.margin>
+                <effect>
+                    <DropShadow />
+                </effect>
+                <padding>
+                    <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+                </padding>
+            </VBox>
+         <Label fx:id="error_display" onMouseDragged="#do_nothing" text="Label" textFill="#b51212" visible="false">
+            <font>
+               <Font name="Raleway Medium" size="12.0" />
+            </font>
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+            <cursor>
+               <Cursor fx:constant="TEXT" />
+            </cursor>
+         </Label>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+        </VBox>
+    </center>
+   <top>
+      <Button mnemonicParsing="false" onMouseClicked="#close" style="-fx-background-color: transparent;" text="Exit" textFill="WHITE" BorderPane.alignment="TOP_RIGHT">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <font>
+            <Font name="Raleway Black" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </top>
+</BorderPane>
