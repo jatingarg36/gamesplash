@@ -21,7 +21,7 @@ public class Encryption {
         this.password = password;
     }
     
-    public String performEncryption(int key){
+    public String performEncryption(String password,int key){
         String cipherPsd = "";
         int len = password.length();
         for(int i=0;i<password.length();i++){

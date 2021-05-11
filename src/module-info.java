@@ -7,4 +7,6 @@ module gamesplash {
 
     opens server.Init;
     opens client.auth;
+    opens client.home;
+    opens client.home.profile;
 }

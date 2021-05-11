@@ -1,13 +1,17 @@
 package client.auth;
 
 import client.Client;
+import client.home.DashBoard;
 import database.ConnectionProvider;
 import database.dao.UserDao;
 import database.models.Users;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -21,6 +25,7 @@ import java.net.Socket;
 import java.sql.Connection;
 import java.text.NumberFormat;
 import java.text.ParseException;
+import java.util.Objects;
 
 public class AuthController {
 
@@ -76,7 +81,7 @@ public class AuthController {
                 if (user != null) {
                     int port = Integer.parseInt(client_port.getText());
                     Socket clientSocket = new Client(port).getSocket();
-                    this.startClientHome(user, clientSocket);
+                    this.startClientHome(user, clientSocket,event);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -110,6 +115,7 @@ public class AuthController {
 
         switch (currentUser.getKey()) {
             case "success":
+                System.out.println(currentUser.getValue().getUsername());
                 return currentUser.getValue();
             case "invalid password":
                 pass_error.setText("Invalid Password");
@@ -139,8 +145,10 @@ public class AuthController {
 
     }
 
-    private void startClientHome(Users user, Socket clientSocket) {
+    private void startClientHome(Users user, Socket clientSocket,ActionEvent e) throws IOException {
         processState(true);
+        ((Stage)((Node)e.getSource()).getScene().getWindow()).close();
+        new DashBoard(user,clientSocket).start(new Stage());
     }
 
 

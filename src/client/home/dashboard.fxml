@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="850.0" minWidth="1280.0" prefHeight="850.0" prefWidth="1280.0" style="-fx-background-color: #131314;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane cacheShape="false" centerShape="false" fitToHeight="true" fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" hmax="0.0" pickOnBounds="false" scaleShape="false" style="-fx-background-color: #3B3B3B; -fx-background: transparent; -fx-background-radius: 15;" vbarPolicy="NEVER" vmax="0.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <content>
+            <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" spacing="15.0" style="-fx-background-color: transparent; -fx-background-radius: 15; -fx-border-radius: 15;">
+               <children>
+                  <Label text="Gamesplash" textFill="WHITE">
+                     <font>
+                        <Font name="Rage Italic" size="28.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button fx:id="profile_btn" alignment="BASELINE_LEFT" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseEntered="#hoverEnter" onMouseExited="#hoverExit" onMousePressed="#selectOption" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: #131314; -fx-background-radius: 0; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);" text="Profile" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="15.0" left="30.0" right="10.0" top="15.0" />
+                     </padding>
+                     <font>
+                        <Font name="Raleway SemiBold" size="17.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="leaderboard_btn" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseEntered="#hoverEnter" onMouseExited="#hoverExit" onMousePressed="#selectOption" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-background-radius: 0;" text="Leaderboard" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="15.0" left="30.0" right="10.0" top="15.0" />
+                     </padding>
+                     <font>
+                        <Font name="Raleway SemiBold" size="17.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="live_btn" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseEntered="#hoverEnter" onMouseExited="#hoverExit" onMousePressed="#selectOption" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-background-radius: 0;" text="Live Games" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="15.0" left="30.0" right="10.0" top="15.0" />
+                     </padding>
+                     <font>
+                        <Font name="Raleway SemiBold" size="17.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="challenge_btn" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseEntered="#hoverEnter" onMouseExited="#hoverExit" onMousePressed="#selectOption" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-background-radius: 0;" text="Challenge" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="15.0" left="30.0" right="10.0" top="15.0" />
+                     </padding>
+                     <font>
+                        <Font name="Raleway SemiBold" size="17.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="practice_btn" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseEntered="#hoverEnter" onMouseExited="#hoverExit" onMousePressed="#selectOption" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-background-radius: 0;" text="Practice" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="15.0" left="30.0" right="10.0" top="15.0" />
+                     </padding>
+                     <font>
+                        <Font name="Raleway SemiBold" size="17.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="chatroom_btn" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseEntered="#hoverEnter" onMouseExited="#hoverExit" onMousePressed="#selectOption" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-background-radius: 0;" text="Chat Room" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="15.0" left="30.0" right="10.0" top="15.0" />
+                     </padding>
+                     <font>
+                        <Font name="Raleway SemiBold" size="17.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="helpcenter_btn" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseEntered="#hoverEnter" onMouseExited="#hoverExit" onMousePressed="#selectOption" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-background-radius: 0;" text="Help Center" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="15.0" left="30.0" right="10.0" top="15.0" />
+                     </padding>
+                     <font>
+                        <Font name="Raleway SemiBold" size="17.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="setting_btn" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseEntered="#hoverEnter" onMouseExited="#hoverExit" onMousePressed="#selectOption" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-background-radius: 0;" text="Setting" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="15.0" left="30.0" right="10.0" top="15.0" />
+                     </padding>
+                     <font>
+                        <Font name="Raleway SemiBold" size="17.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="signout_btn" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#signout" onMouseEntered="#hoverEnter" onMouseExited="#hoverExit" onMousePressed="#selectOption" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-background-radius: 0;" text="Signout" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="15.0" left="30.0" right="10.0" top="15.0" />
+                     </padding>
+                     <font>
+                        <Font name="Raleway SemiBold" size="17.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" right="5.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content>
+         <padding>
+            <Insets bottom="5.0" top="5.0" />
+         </padding>
+      </ScrollPane>
+      <AnchorPane fx:id="contentSection" layoutX="210.0" layoutY="15.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+   </children>
+</AnchorPane>

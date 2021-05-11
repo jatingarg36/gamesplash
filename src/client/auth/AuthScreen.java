@@ -19,7 +19,7 @@ public class AuthScreen extends Application {
     public void start(Stage primaryStage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("authscreen.fxml"));
         primaryStage.setTitle("Gamesplash");
-        primaryStage.initStyle(StageStyle.TRANSPARENT);
+//        primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
