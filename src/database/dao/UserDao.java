@@ -3,7 +3,7 @@ package database.dao;
 import java.sql.Connection;
 
 import database.models.Users;
-import Helper.Encryption;
+import helper.Encryption;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -35,7 +35,7 @@ public class UserDao {
             int salt = (int) (Math.random() * 10);
             String cipherPsd = new Encryption().performEncryption(password, salt);
             Timestamp timestamp = new Timestamp(new Date().getTime());
-            String query = "insert into users(username,hashed_password,salt,isActive,joined_at,last_visited) values ('" + username + "','" + cipherPsd + "','" + salt + "','" + true + "','" + timestamp + "','" + timestamp + "')";
+            String query = "insert into users(username,hashed_password,salt,isActive,joined_at,last_visited) values ('" + username + "','" + cipherPsd + "','" + salt + "','" + 0 + "','" + timestamp + "','" + timestamp + "')";
             PreparedStatement statement = con.prepareCall(query);
             statement.execute();
 

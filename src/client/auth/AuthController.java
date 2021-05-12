@@ -5,6 +5,7 @@ import client.home.DashBoard;
 import database.ConnectionProvider;
 import database.dao.UserDao;
 import database.models.Users;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

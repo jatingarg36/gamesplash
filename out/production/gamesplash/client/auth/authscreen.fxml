@@ -12,7 +12,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #131314;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.auth.AuthController">
    <padding>
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -60,7 +59,7 @@
                               <Font name="Raleway Italic" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="username" promptText="Enter your username" style="-fx-border-color: white; -fx-border-radius: 5; -fx-background-color: transparent; -fx-text-inner-color: white;">
+                        <TextField fx:id="username" promptText="Enter your username" style="-fx-border-color: white; -fx-border-radius: 5; -fx-background-color: transparent; -fx-text-inner-color: white;" text="jatinga">
                            <font>
                               <Font name="Raleway" size="14.0" />
                            </font>
@@ -88,7 +87,7 @@
                               <Font name="Raleway Italic" size="12.0" />
                            </font>
                         </Label>
-                        <PasswordField fx:id="password" promptText="Enter your password" style="-fx-border-color: white; -fx-border-radius: 5; -fx-background-color: transparent; -fx-text-inner-color: white;">
+                        <PasswordField fx:id="password" promptText="Enter your password" style="-fx-border-color: white; -fx-border-radius: 5; -fx-background-color: transparent; -fx-text-inner-color: white;" text="jatingarg@123">
                            <font>
                               <Font name="Raleway" size="14.0" />
                            </font>
@@ -116,7 +115,7 @@
                               <Font name="Raleway Italic" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="client_port" promptText="Enter your port" style="-fx-border-color: white; -fx-border-radius: 5; -fx-background-color: transparent; -fx-text-inner-color: white;">
+                        <TextField fx:id="client_port" promptText="Enter your port" style="-fx-border-color: white; -fx-border-radius: 5; -fx-background-color: transparent; -fx-text-inner-color: white;" text="4000">
                            <font>
                               <Font name="Raleway" size="14.0" />
                            </font>

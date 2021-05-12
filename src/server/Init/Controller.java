@@ -1,6 +1,7 @@
 package server.Init;
 
 import client.auth.AuthScreen;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -114,6 +115,7 @@ public class Controller{
     private void close(MouseEvent e) {
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         stage.close();
+        Platform.exit();
     }
 
     @FXML

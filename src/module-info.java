@@ -9,4 +9,11 @@ module gamesplash {
     opens client.auth;
     opens client.home;
     opens client.home.profile;
+    opens client.home.practice;
+    opens client.home.helpcenter;
+    opens client.home.setting;
+    opens client.home.chatroom;
+    opens client.home.challenge;
+    opens client.home.livegames;
+    opens client.home.leaderboard;
 }

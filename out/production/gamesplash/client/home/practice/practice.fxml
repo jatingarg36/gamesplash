@@ -1,14 +1,1335 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            prefHeight="650.0" prefWidth="1025.0"
-            style="-fx-background-color:blue">
-
+<AnchorPane style="-fx-background-color: #131314;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="20.0" layoutY="10.0" pannable="true" style="-fx-background: transparent; -fx-background-color: transparent;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+              <BorderPane>
+                  <top>
+                      <Label text="Practice Mode" textFill="WHITE" BorderPane.alignment="CENTER">
+                          <font>
+                              <Font name="Raleway Black" size="45.0" />
+                          </font>
+                     <BorderPane.margin>
+                        <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                     </BorderPane.margin>
+                      </Label>
+                  </top>
+                  <center>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="450.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <center>
+                                  <GridPane fx:id="mainGP" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: white;">
+                                      <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" />
+                                          <ColumnConstraints hgrow="SOMETIMES" />
+                                          <ColumnConstraints hgrow="SOMETIMES" />
+                                          <ColumnConstraints hgrow="SOMETIMES" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                    <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                      <children>
+                                          <GridPane alignment="CENTER" style="-fx-border-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                              <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                              </columnConstraints>
+                                              <rowConstraints>
+                                          <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                              </rowConstraints>
+                                              <children>
+                                                  <TextField alignment="CENTER" editable="false" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField fx:id="index10" alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                              </children>
+                                          </GridPane>
+                                          <GridPane style="-fx-border-color: white; -fx-background-color: #272729;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                              <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                              </columnConstraints>
+                                              <rowConstraints>
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                              </rowConstraints>
+                                              <children>
+                                                  <TextField alignment="CENTER" editable="false" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                              </children>
+                                          </GridPane>
+                                          <GridPane style="-fx-border-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                              <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                              </columnConstraints>
+                                              <rowConstraints>
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                              </rowConstraints>
+                                              <children>
+                                                  <TextField alignment="CENTER" editable="false" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                              </children>
+                                          </GridPane>
+                                          <GridPane style="-fx-border-color: white; -fx-background-color: #272729;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                              <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                              </columnConstraints>
+                                              <rowConstraints>
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                              </rowConstraints>
+                                              <children>
+                                                  <TextField alignment="CENTER" editable="false" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                              </children>
+                                          </GridPane>
+                                          <GridPane style="-fx-border-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                              <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                              </columnConstraints>
+                                              <rowConstraints>
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                              </rowConstraints>
+                                              <children>
+                                                  <TextField alignment="CENTER" editable="false" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                              </children>
+                                          </GridPane>
+                                          <GridPane style="-fx-border-color: white; -fx-background-color: #272729;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                              <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                              </columnConstraints>
+                                              <rowConstraints>
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                              </rowConstraints>
+                                              <children>
+                                                  <TextField alignment="CENTER" editable="false" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                              </children>
+                                          </GridPane>
+                                          <GridPane style="-fx-border-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                              <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                              </columnConstraints>
+                                              <rowConstraints>
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                              </rowConstraints>
+                                              <children>
+                                                  <TextField alignment="CENTER" editable="false" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                              </children>
+                                          </GridPane>
+                                          <GridPane style="-fx-border-color: white; -fx-background-color: #272729;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                              <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                              </columnConstraints>
+                                              <rowConstraints>
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                              </rowConstraints>
+                                              <children>
+                                                  <TextField alignment="CENTER" editable="false" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                                  </TextField>
+                                              </children>
+                                          </GridPane>
+                                          <GridPane style="-fx-border-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                              <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                              </columnConstraints>
+                                              <rowConstraints>
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                              </rowConstraints>
+                                              <children>
+                                                  <TextField alignment="CENTER" editable="false" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                              </children>
+                                          </GridPane>
+                                      </children>
+                                  </GridPane>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+                  </center>
+               <right>
+                  <AnchorPane minWidth="250.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button layoutX="23.0" layoutY="14.0" mnemonicParsing="false" onAction="#autocomplete" style="-fx-background-color: #303030; -fx-text-fill: white; -fx-background-radius: 8;" text="AutoComplete" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font name="Raleway SemiBold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="undo_btn" layoutX="20.0" layoutY="177.0" mnemonicParsing="false" onAction="#undoStep" style="-fx-background-color: #171717; -fx-background-radius: 8; -fx-border-color: #707070; -fx-border-width: 2; -fx-border-radius: 8;" text="Undo" textFill="#dadada" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font name="Raleway SemiBold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="20.0" layoutY="241.0" mnemonicParsing="false" onAction="#showHint" style="-fx-background-color: #171717; -fx-background-radius: 8; -fx-border-color: #707070; -fx-border-width: 2; -fx-border-radius: 8;" text="Hint" textFill="#dadada" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font name="Raleway SemiBold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="20.0" layoutY="330.0" mnemonicParsing="false" onAction="#submit" style="-fx-background-color: #2E82DC; -fx-text-fill: white; -fx-background-radius: 8;" text="Submit" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font name="Raleway SemiBold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </AnchorPane>
+               </right>
+               <left>
+                  <AnchorPane minWidth="300.0">
+                     <children>
+                        <Label layoutX="76.0" layoutY="96.0" text="Choose Difficulty" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font name="Raleway SemiBold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="difficulty_option" layoutX="87.0" layoutY="131.0" promptText="Easy" style="-fx-background-color: #303030; -fx-background: #303030;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </ComboBox>
+                        <Label fx:id="timeCounter" alignment="CENTER" layoutX="78.0" layoutY="186.0" text="00:00" textFill="WHITE" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="150.0">
+                           <font>
+                              <Font name="Segoe UI" size="40.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="94.0" layoutY="254.0" mnemonicParsing="false" onAction="#start_game" style="-fx-background-color: #2E82DC; -fx-text-fill: white; -fx-background-radius: 8;" text="Start" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font name="Raleway SemiBold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="85.0" layoutY="315.0" mnemonicParsing="false" onAction="#renew_board" style="-fx-background-color: #2E82DC; -fx-text-fill: white; -fx-background-radius: 8;" text="Reset" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font name="Raleway SemiBold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                         <Label layoutX="97.0" layoutY="376.0" text="Max Score" textFill="WHITE" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                             <font>
+                                 <Font name="Raleway Black" size="20.0" />
+                             </font>
+                         </Label>
+                        <Label fx:id="points" alignment="CENTER" contentDisplay="CENTER" layoutX="91.0" layoutY="420.0" style="-fx-background-color: #303030; -fx-background-radius: 5;" text="0 pts" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font name="Raleway Black" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+      
+                  </AnchorPane>
+               </left>
+               <bottom>
+                  <AnchorPane BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <GridPane alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                              <ColumnConstraints />
+                              <ColumnConstraints halignment="CENTER" minWidth="-Infinity" />
+                              <ColumnConstraints halignment="CENTER" minWidth="-Infinity" />
+                            <ColumnConstraints halignment="CENTER" minWidth="-Infinity" />
+                            <ColumnConstraints halignment="CENTER" minWidth="-Infinity" />
+                              <ColumnConstraints halignment="CENTER" minWidth="-Infinity" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints />
+                            <RowConstraints minHeight="-Infinity" valignment="CENTER" />
+                              <RowConstraints minHeight="-Infinity" valignment="CENTER" />
+                          </rowConstraints>
+                           <children>
+                              <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#btn_clicked" onMouseEntered="#hover_on_btn" onMouseExited="#hover_exit_on_btn" onMousePressed="#btn_pressed" onMouseReleased="#btn_released" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-border-color: #707070; -fx-border-radius: 3;" text="2" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#btn_clicked" onMouseEntered="#hover_on_btn" onMouseExited="#hover_exit_on_btn" onMousePressed="#btn_pressed" onMouseReleased="#btn_released" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-border-color: #707070; -fx-border-radius: 3;" text="3" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="210.0" layoutY="13.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#btn_clicked" onMouseEntered="#hover_on_btn" onMouseExited="#hover_exit_on_btn" onMousePressed="#btn_pressed" onMouseReleased="#btn_released" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-border-color: #707070; -fx-border-radius: 3;" text="6" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="43.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#btn_clicked" onMouseEntered="#hover_on_btn" onMouseExited="#hover_exit_on_btn" onMousePressed="#btn_pressed" onMouseReleased="#btn_released" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-border-color: #707070; -fx-border-radius: 3;" text="7" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="13.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#btn_clicked" onMouseEntered="#hover_on_btn" onMouseExited="#hover_exit_on_btn" onMousePressed="#btn_pressed" onMouseReleased="#btn_released" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-border-color: #707070; -fx-border-radius: 3;" text="9" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="13.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#btn_clicked" onMouseEntered="#hover_on_btn" onMouseExited="#hover_exit_on_btn" onMousePressed="#btn_pressed" onMouseReleased="#btn_released" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-border-color: #707070; -fx-border-radius: 3;" text="8" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="13.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#btn_clicked" onMouseEntered="#hover_on_btn" onMouseExited="#hover_exit_on_btn" onMousePressed="#btn_pressed" onMouseReleased="#btn_released" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-border-color: #707070; -fx-border-radius: 3;" text="1" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="13.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#btn_clicked" onMouseEntered="#hover_on_btn" onMouseExited="#hover_exit_on_btn" onMousePressed="#btn_pressed" onMouseReleased="#btn_released" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-border-color: #707070; -fx-border-radius: 3;" text="4" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="13.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#btn_clicked" onMouseEntered="#hover_on_btn" onMouseExited="#hover_exit_on_btn" onMousePressed="#btn_pressed" onMouseReleased="#btn_released" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-border-color: #707070; -fx-border-radius: 3;" text="5" textFill="WHITE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="13.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#btn_clicked" onMouseEntered="#hover_on_btn" onMouseExited="#hover_exit_on_btn" onMousePressed="#btn_pressed" onMouseReleased="#btn_released" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-border-color: #707070; -fx-border-radius: 3;" textFill="WHITE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+      
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </bottom>
+              </BorderPane>
+         </content>
+      </ScrollPane>
+    </children>
 </AnchorPane>

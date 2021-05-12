@@ -18,12 +18,22 @@ public class SudokuGenerator {
         }
     }
 
-    public void setDifficulty(int d) {
-        this.difficulty_level = d;
+    public void setDifficulty(String difficulty) {
+        switch (difficulty) {
+            case "medium":
+                difficulty_level = 2;
+                break;
+            case "difficult":
+                difficulty_level = 3;
+                break;
+            default:
+                difficulty_level = 1;
+                break;
+        }
 
         int max = 64, min = 16;
         // Choosing max and min for deciding         
-        switch (this.difficulty_level) {
+        switch (difficulty_level) {
             case 1:
                 max = 24;
                 break;

@@ -4,6 +4,7 @@ import database.ConnectionProvider;
 import database.dao.UserDao;
 import database.models.Users;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -26,14 +27,10 @@ public class DashBoard extends Application {
         this.currentSocket = currentSocket;
     }
 
-    public static void main(String[] args) {
-        launch(args);
-    }
-
     @Override
     public void start(Stage primaryStage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
-        fxmlLoader.setController(new DashboardController(currentUser,currentSocket));
+        fxmlLoader.setController(new DashboardController(this.currentUser,this.currentSocket));
         Parent root = fxmlLoader.load();
         primaryStage.setTitle("Dashboard");
 //        primaryStage.initStyle(StageStyle.TRANSPARENT);
@@ -56,5 +53,7 @@ public class DashBoard extends Application {
         UserDao userDao = new UserDao(con);
         userDao.logout(currentUser);
         currentSocket.close();
+        Platform.exit();
+        System.exit(0);
     }
 }

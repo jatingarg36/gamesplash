@@ -9,9 +9,12 @@ import client.home.livegames.LiveGameController;
 import client.home.practice.PracticeController;
 import client.home.profile.ProfileController;
 import client.home.setting.SettingController;
+import client.io_handler.InputHandler;
+import client.io_handler.OutputHandler;
 import database.ConnectionProvider;
 import database.dao.UserDao;
 import database.models.Users;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,16 +25,34 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.sql.Connection;
 
 public class DashboardController {
     private final Users user;
     private final Socket socket;
+    private ObjectOutputStream oos;
+    private ObjectInputStream ois;
+    private OutputHandler outputHandler;
+    private InputHandler inputHandler;
 
     public DashboardController(Users user, Socket socket) {
         this.user = user;
         this.socket = socket;
+        try {
+            this.oos = new ObjectOutputStream(socket.getOutputStream());
+            this.ois = new ObjectInputStream(socket.getInputStream());
+
+            inputHandler = new InputHandler(ois);
+            inputHandler.start();
+//            System.out.println("hel1");
+            oos.writeObject(user);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     private Button activeBtn;
@@ -86,8 +107,12 @@ public class DashboardController {
             profileController = new ProfileController(user,socket);
         loader.setController(profileController);
         try {
-            AnchorPane parent = loader.load();
             contentSection.getChildren().clear();
+            AnchorPane parent = loader.load();
+            AnchorPane.setBottomAnchor(parent,0.0);
+            AnchorPane.setLeftAnchor(parent,0.0);
+            AnchorPane.setRightAnchor(parent,0.0);
+            AnchorPane.setTopAnchor(parent,0.0);
             contentSection.getChildren().add(parent);
             System.out.println(contentSection.getChildren().stream().count());
         } catch (IOException e) {
@@ -152,9 +177,12 @@ public class DashboardController {
         }
 
         if (loader != null) {
-            AnchorPane parent = loader.load();
             contentSection.getChildren().clear();
-
+            AnchorPane parent = loader.load();
+            AnchorPane.setBottomAnchor(parent,0.0);
+            AnchorPane.setLeftAnchor(parent,0.0);
+            AnchorPane.setRightAnchor(parent,0.0);
+            AnchorPane.setTopAnchor(parent,0.0);
             contentSection.getChildren().add(parent);
             System.out.println(contentSection.getChildren().stream().count());
         }
@@ -176,9 +204,9 @@ public class DashboardController {
 
     @FXML
     void signout(ActionEvent e) throws IOException {
-//        socket.close();
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         stage.close();
+        Platform.exit();
 //        completePendingQueries();
         Connection con = ConnectionProvider.getConnection();
         UserDao userDao = new UserDao(con);
