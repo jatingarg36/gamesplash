@@ -20,20 +20,27 @@ import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.ResourceBundle;
 
-public class Controller{
+public class Controller {
 
 
-    @FXML private TextField server_port_input;
-    @FXML private Button btn_start_server;
-    @FXML private Label error_display;
+    @FXML
+    private TextField server_port_input;
+    @FXML
+    private Button btn_start_server;
+    @FXML
+    private Label error_display;
 
-    private boolean state = false;
     private Server server = null;
+    private boolean state = false;
     private double x, y;
 
     public Controller() {
     }
 
+    public Controller(Server server, boolean state) {
+        this.server = server;
+        this.state = state;
+    }
 
     @FXML
     private void startServer() {
@@ -82,7 +89,7 @@ public class Controller{
     }
 
     private void setTextField(String msg, int valid) {
-        System.out.println( valid+" : "+msg);
+        System.out.println(valid + " : " + msg);
         error_display.setText(msg);
         error_display.setVisible(true);
     }
@@ -115,7 +122,7 @@ public class Controller{
     private void close(MouseEvent e) {
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         stage.close();
-        Platform.exit();
+        server.Stop();
     }
 
     @FXML
@@ -124,7 +131,8 @@ public class Controller{
         stage.setIconified(true);
     }
 
-    @FXML private void do_nothing(){
+    @FXML
+    private void do_nothing() {
 
     }
 }

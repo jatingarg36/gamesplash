@@ -65,7 +65,7 @@
                                                   <RowConstraints vgrow="SOMETIMES" />
                                               </rowConstraints>
                                               <children>
-                                                  <TextField alignment="CENTER" editable="false" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -76,7 +76,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField fx:id="index10" alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                  <TextField fx:id="index10" alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -87,7 +87,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -98,7 +98,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -109,7 +109,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -120,7 +120,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -131,7 +131,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -142,7 +142,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -153,7 +153,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -180,7 +180,7 @@
                                                   <RowConstraints vgrow="SOMETIMES" />
                                               </rowConstraints>
                                               <children>
-                                                  <TextField alignment="CENTER" editable="false" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -191,7 +191,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -202,7 +202,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -213,7 +213,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -224,7 +224,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -235,7 +235,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -246,7 +246,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -257,7 +257,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -268,7 +268,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -295,7 +295,7 @@
                                                   <RowConstraints vgrow="SOMETIMES" />
                                               </rowConstraints>
                                               <children>
-                                                  <TextField alignment="CENTER" editable="false" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -306,7 +306,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -317,7 +317,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -328,7 +328,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -339,7 +339,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -350,7 +350,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -361,7 +361,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -372,7 +372,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -383,7 +383,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -410,7 +410,7 @@
                                                   <RowConstraints vgrow="SOMETIMES" />
                                               </rowConstraints>
                                               <children>
-                                                  <TextField alignment="CENTER" editable="false" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -421,7 +421,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -432,7 +432,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -443,7 +443,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -454,7 +454,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -465,7 +465,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -476,7 +476,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -487,7 +487,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -498,7 +498,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -525,7 +525,7 @@
                                                   <RowConstraints vgrow="SOMETIMES" />
                                               </rowConstraints>
                                               <children>
-                                                  <TextField alignment="CENTER" editable="false" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -536,7 +536,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -547,7 +547,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -558,7 +558,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -569,7 +569,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -580,7 +580,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -591,7 +591,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -602,7 +602,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -613,7 +613,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -640,7 +640,7 @@
                                                   <RowConstraints vgrow="SOMETIMES" />
                                               </rowConstraints>
                                               <children>
-                                                  <TextField alignment="CENTER" editable="false" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -651,7 +651,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -662,7 +662,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -673,7 +673,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -684,7 +684,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -695,7 +695,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -706,7 +706,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -717,7 +717,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -728,7 +728,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -755,7 +755,7 @@
                                                   <RowConstraints vgrow="SOMETIMES" />
                                               </rowConstraints>
                                               <children>
-                                                  <TextField alignment="CENTER" editable="false" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -766,7 +766,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -777,7 +777,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -788,7 +788,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -799,7 +799,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -810,7 +810,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -821,7 +821,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -832,7 +832,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -843,7 +843,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -870,63 +870,7 @@
                                                   <RowConstraints vgrow="SOMETIMES" />
                                               </rowConstraints>
                                               <children>
-                                                  <TextField alignment="CENTER" editable="false" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                                      <padding>
-                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                      </padding>
-                                                      <font>
-                                                          <Font name="Segoe UI Black" size="20.0" />
-                                                      </font>
-                                                  </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                                      <padding>
-                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                      </padding>
-                                                      <font>
-                                                          <Font name="Segoe UI Black" size="20.0" />
-                                                      </font>
-                                                  </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
-                                                      <padding>
-                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                      </padding>
-                                                      <font>
-                                                          <Font name="Segoe UI Black" size="20.0" />
-                                                      </font>
-                                                  </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                                      <padding>
-                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                      </padding>
-                                                      <font>
-                                                          <Font name="Segoe UI Black" size="20.0" />
-                                                      </font>
-                                                  </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                                                      <padding>
-                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                      </padding>
-                                                      <font>
-                                                          <Font name="Segoe UI Black" size="20.0" />
-                                                      </font>
-                                                  </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
-                                                      <padding>
-                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                      </padding>
-                                                      <font>
-                                                          <Font name="Segoe UI Black" size="20.0" />
-                                                      </font>
-                                                  </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                                      <padding>
-                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                      </padding>
-                                                      <font>
-                                                          <Font name="Segoe UI Black" size="20.0" />
-                                                      </font>
-                                                  </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -937,13 +881,93 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
                                                       <font>
                                                           <Font name="Segoe UI Black" size="20.0" />
                                                       </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                                  </TextField>
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                      <padding>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </padding>
+                                                      <font>
+                                                          <Font name="Segoe UI Black" size="20.0" />
+                                                      </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
                                                   </TextField>
                                               </children>
                                           </GridPane>
@@ -961,7 +985,7 @@
                                                   <RowConstraints vgrow="SOMETIMES" />
                                               </rowConstraints>
                                               <children>
-                                                  <TextField alignment="CENTER" editable="false" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -972,7 +996,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -983,7 +1007,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -994,7 +1018,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -1005,7 +1029,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -1016,7 +1040,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -1027,7 +1051,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -1038,7 +1062,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -1049,7 +1073,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                                   </TextField>
-                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                  <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="11.0" onKeyPressed="#key_typed" onMouseClicked="#selectField" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                                       <padding>
                                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                       </padding>
@@ -1083,7 +1107,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button fx:id="undo_btn" layoutX="20.0" layoutY="177.0" mnemonicParsing="false" onAction="#undoStep" style="-fx-background-color: #171717; -fx-background-radius: 8; -fx-border-color: #707070; -fx-border-width: 2; -fx-border-radius: 8;" text="Undo" textFill="#dadada" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                        <Button fx:id="undo_btn" layoutX="20.0" layoutY="177.0" mnemonicParsing="false" onAction="#undoStep" onMouseEntered="#hover_on_btn" onMouseExited="#hover_exit_on_btn" style="-fx-background-color: #171717; -fx-background-radius: 8; -fx-border-color: #707070; -fx-border-width: 2; -fx-border-radius: 8;" text="Undo" textFill="#dadada" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
                            <font>
                               <Font name="Raleway SemiBold" size="18.0" />
                            </font>
@@ -1094,7 +1118,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button layoutX="20.0" layoutY="241.0" mnemonicParsing="false" onAction="#showHint" style="-fx-background-color: #171717; -fx-background-radius: 8; -fx-border-color: #707070; -fx-border-width: 2; -fx-border-radius: 8;" text="Hint" textFill="#dadada" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                        <Button layoutX="20.0" layoutY="241.0" mnemonicParsing="false" onAction="#showHint" onMouseEntered="#hover_on_btn" onMouseExited="#hover_exit_on_btn" style="-fx-background-color: #171717; -fx-background-radius: 8; -fx-border-color: #707070; -fx-border-width: 2; -fx-border-radius: 8;" text="Hint" textFill="#dadada" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
                            <font>
                               <Font name="Raleway SemiBold" size="18.0" />
                            </font>
@@ -1130,14 +1154,14 @@
                               <Font name="Raleway SemiBold" size="12.0" />
                            </font>
                         </Label>
-                        <ComboBox fx:id="difficulty_option" layoutX="87.0" layoutY="131.0" promptText="Easy" style="-fx-background-color: #303030; -fx-background: #303030;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
+                        <ComboBox fx:id="difficulty_option" layoutX="87.0" layoutY="131.0" promptText="Choose Difficulty" style="-fx-background-color: white; -fx-color-fill: white;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                         </ComboBox>
                         <Label fx:id="timeCounter" alignment="CENTER" layoutX="78.0" layoutY="186.0" text="00:00" textFill="WHITE" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="150.0">
                            <font>
-                              <Font name="Segoe UI" size="40.0" />
+                              <Font name="Raleway SemiBold" size="40.0" />
                            </font>
                         </Label>
                         <Button layoutX="94.0" layoutY="254.0" mnemonicParsing="false" onAction="#start_game" style="-fx-background-color: #2E82DC; -fx-text-fill: white; -fx-background-radius: 8;" text="Start" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
@@ -1151,12 +1175,12 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button layoutX="85.0" layoutY="315.0" mnemonicParsing="false" onAction="#renew_board" style="-fx-background-color: #2E82DC; -fx-text-fill: white; -fx-background-radius: 8;" text="Reset" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                        <Button fx:id="reset_btn" layoutX="85.0" layoutY="315.0" mnemonicParsing="false" onAction="#reset_board" onMouseEntered="#hover_on_btn" onMouseExited="#hover_exit_on_btn" style="-fx-background-color: #171717; -fx-background-radius: 8; -fx-border-color: #707070; -fx-border-radius: 8; -fx-border-width: 2;" text="Reset" textFill="#dadada" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
                            <font>
                               <Font name="Raleway SemiBold" size="18.0" />
                            </font>
                            <padding>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                            </padding>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -1167,7 +1191,7 @@
                                  <Font name="Raleway Black" size="20.0" />
                              </font>
                          </Label>
-                        <Label fx:id="points" alignment="CENTER" contentDisplay="CENTER" layoutX="91.0" layoutY="420.0" style="-fx-background-color: #303030; -fx-background-radius: 5;" text="0 pts" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                        <Label fx:id="max_points" alignment="CENTER" contentDisplay="CENTER" layoutX="91.0" layoutY="420.0" style="-fx-background-color: #303030; -fx-background-radius: 5;" text="0 pts" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
                            <font>
                               <Font name="Raleway Black" size="20.0" />
                            </font>

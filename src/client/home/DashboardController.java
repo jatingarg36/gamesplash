@@ -136,7 +136,7 @@ public class DashboardController {
             this.activeBtn = practice_btn;
             loader = new FXMLLoader(getClass().getResource("practice/practice.fxml"));
             if (practiceController == null)
-                practiceController = new PracticeController();
+                practiceController = new PracticeController(user,socket);
             loader.setController(practiceController);
         } else if (leaderboard_btn.equals(selected)) {
             this.activeBtn = leaderboard_btn;

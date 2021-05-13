@@ -12,7 +12,7 @@ CREATE TABLE users (
     hashed_password varchar(255) NOT NULL,
     salt varchar(255) NOT NULL,
     isActive boolean NOT NULL DEFAULT false,
-    status enum('available','busy','in game','away') NOT NULL DEFAULT 'away',
+    status enum('available','busy','inMatch','away') NOT NULL DEFAULT 'away',
     score int NOT NULL DEFAULT 0,
     rank int,
     badge enum('freshman','beginner','intermediate','advanced','expert','guru','headmaster') NOT NULL DEFAULT 'freshman',
@@ -78,8 +78,8 @@ CREATE TABLE self_practice(
     player_id int NOT NULL,
     start_time timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     end_time timestamp,
+    difficulty enum('easy','medium','hard') NOT NULL,
     score int NOT NULL DEFAULT 0,
-    auto_completed boolean NOT NULL DEFAULT false,
     PRIMARY KEY(practice_id),
     FOREIGN KEY(player_id) REFERENCES users(user_id),
     CHECK(score>=0)

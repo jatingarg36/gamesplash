@@ -105,16 +105,29 @@ public class UserDao {
     }
 
     private boolean setUserOnline(String username) {
-        String query = "Update users Set isActive='1' where username='"+username+"'";
+        String query = "Update users Set isActive='1', status='1' where username='"+username+"'";
         try{
             PreparedStatement statement = con.prepareStatement(query);
-            statement.execute();
+            if(statement.execute())
+                return true;
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
-            return false;
         }
-        return true;
+        return false;
+    }
+
+    public boolean setUserStatus(int uid,int status){
+        String query = "update users set status='"+status+"' where user_id='"+uid+"'";
+        try{
+            PreparedStatement statement = con.prepareStatement(query);
+            if(statement.execute()){
+                return true;
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return false;
     }
 
     public boolean checkUser(String username) {

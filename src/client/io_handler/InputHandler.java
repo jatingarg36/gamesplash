@@ -29,7 +29,8 @@ public class InputHandler extends Thread{
                 }
 
             } catch (IOException | ClassNotFoundException | InterruptedException e) {
-                e.printStackTrace();
+//                e.printStackTrace();
+                break;
             }
         }
     }

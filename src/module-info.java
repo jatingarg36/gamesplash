@@ -16,4 +16,5 @@ module gamesplash {
     opens client.home.challenge;
     opens client.home.livegames;
     opens client.home.leaderboard;
+    opens client.dialogs;
 }

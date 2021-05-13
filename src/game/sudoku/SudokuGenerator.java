@@ -18,12 +18,12 @@ public class SudokuGenerator {
         }
     }
 
-    public void setDifficulty(String difficulty) {
+    public void setDifficulty(String difficulty) throws NullPointerException {
         switch (difficulty) {
             case "medium":
                 difficulty_level = 2;
                 break;
-            case "difficult":
+            case "hard":
                 difficulty_level = 3;
                 break;
             default:
@@ -60,7 +60,7 @@ public class SudokuGenerator {
         else if(!sudoku.isSolvable()){
             return null;
         }
-
+        sudoku.printBoard(board);
         for (int i = 0; i < K; i++) {
             int currentX = (int) (Math.random() * 10) % 9;
             int currentY = (int) (Math.random() * 10) % 9;
