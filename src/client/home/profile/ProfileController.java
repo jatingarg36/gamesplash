@@ -55,7 +55,7 @@ public class ProfileController{
     @FXML
     void initialize(){
         username.setText("Hi, "+ user.getUsername());
-        badge_title.setText(user.getBadge());
+        badge_title.setText(user.getBadge().toString());
         score.setText(String.valueOf(user.getScore()));
         rank.setText(String.valueOf(user.getRank()));
     }

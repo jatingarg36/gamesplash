@@ -14,14 +14,14 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class ErrorDialog {
+public class PromptDialog {
 
     private String title;
     private String description;
     private double x, y;
 
 
-    public ErrorDialog(String title, String description) {
+    public PromptDialog(String title, String description) {
         this.title = title;
         this.description = description;
     }

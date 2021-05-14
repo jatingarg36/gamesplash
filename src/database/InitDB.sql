@@ -12,10 +12,10 @@ CREATE TABLE users (
     hashed_password varchar(255) NOT NULL,
     salt varchar(255) NOT NULL,
     isActive boolean NOT NULL DEFAULT false,
-    status enum('available','busy','inMatch','away') NOT NULL DEFAULT 'away',
+    status enum('AVAILABLE','BUSY','IN_MATCH','IN_PRACTICE','AWAY') NOT NULL DEFAULT 'AVAILABLE',
     score int NOT NULL DEFAULT 0,
     rank int,
-    badge enum('freshman','beginner','intermediate','advanced','expert','guru','headmaster') NOT NULL DEFAULT 'freshman',
+    badge enum('FRESHMAN','BEGINNER','INTERMEDIATE','ADVANCED','EXPERT','GURU','HEADMASTER') NOT NULL DEFAULT 'FRESHMAN',
     joined_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     last_visited timestamp,
     PRIMARY KEY (user_id),
@@ -27,14 +27,14 @@ DROP TABLE IF EXISTS matches;
 
 CREATE TABLE matches(
     match_id int NOT NULL AUTO_INCREMENT,
-    game enum('sudoku') NOT NULL DEFAULT 'sudoku',
-    mtype enum('private','open','tournament') NOT NULL,
+--    game enum('SUDOKU') NOT NULL DEFAULT 'SUDOKU',
+--    match_type enum('private','open','tournament') NOT NULL,
     player_started int NOT NULL,
-    difficulty enum('easy','medium','hard') NOT NULL,
+    difficulty enum('EASY','MEDIUM','HARD','EXTREME') NOT NULL,
     winner int,
     isLive boolean NOT NULL DEFAULT true,
     canJoin boolean NOT NULL DEFAULT true,
-    status enum('beginning soon','ended','live','paused') NOT NULL DEFAULT 'beginning soon',
+    status enum('NOT_STARTED','ENDED','STARTED','TERMINATED') NOT NULL DEFAULT 'NOT_STARTED',
     max_participation int NOT NULL default 1,
     created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     start_time timestamp,
@@ -50,7 +50,7 @@ DROP TABLE IF EXISTS codes;
 CREATE TABLE codes(
     code_id int NOT NULL AUTO_INCREMENT,
     match_id int NOT NULL,
-    code varchar(5) NOT NULL,
+    code varchar(8) NOT NULL,
     PRIMARY KEY(code_id),
     UNIQUE(code),
     FOREIGN KEY(match_id) REFERENCES matches(match_id)
@@ -62,6 +62,7 @@ CREATE TABLE participants(
     participation_id int NOT NULL AUTO_INCREMENT,
     match_id int NOT NULL,
     player_id int NOT NULL,
+    hasLeft boolean NOT NULL DEFAULT false,
     duration TIME DEFAULT 0, -- ( 0 for leaving in between or not completing )
     rank int,   -- ( null for leaving in between or not completing )
     score int NOT NULL DEFAULT 0,
@@ -78,7 +79,7 @@ CREATE TABLE self_practice(
     player_id int NOT NULL,
     start_time timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     end_time timestamp,
-    difficulty enum('easy','medium','hard') NOT NULL,
+    difficulty enum('EASY','MEDIUM','HARD','EXTREME') NOT NULL,
     score int NOT NULL DEFAULT 0,
     PRIMARY KEY(practice_id),
     FOREIGN KEY(player_id) REFERENCES users(user_id),

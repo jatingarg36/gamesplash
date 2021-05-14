@@ -16,9 +16,9 @@ public class Trial extends Application{
         Pane pane = new Pane();
         Button button = new Button("Click Me");
         button.setOnAction(event -> {
-            ErrorDialog errorDialog = new ErrorDialog("some","other");
+            PromptDialog promptDialog = new PromptDialog("some","other");
             try {
-                errorDialog.start();
+                promptDialog.start();
             } catch (Exception e) {
                 e.printStackTrace();
             }

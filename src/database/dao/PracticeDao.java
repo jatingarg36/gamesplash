@@ -1,12 +1,12 @@
 package database.dao;
 
+import enums.Difficulty;
 import database.models.Practice;
 import database.models.Users;
 import javafx.util.Pair;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.List;
 
 public class PracticeDao {
 
@@ -18,7 +18,7 @@ public class PracticeDao {
         this.users = users;
     }
 
-    public Pair<Boolean, Integer> startPractice(Timestamp startedAt, String difficulty) {
+    public int startPractice(Timestamp startedAt, Difficulty difficulty) {
 
         String query = "insert into self_practice(player_id,start_time,difficulty) values ('" + users.getUser_id() + "','" + startedAt + "','" + difficulty + "')";
         int practice_id = 0;
@@ -28,13 +28,12 @@ public class PracticeDao {
             ResultSet resultSet = statement.getGeneratedKeys();
             if (resultSet.next()) {
                 practice_id = resultSet.getInt(1);
-                return new Pair<>(true, practice_id);
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
-        return new Pair<>(false, practice_id);
+        return practice_id;
     }
 
     public boolean cancelPractice(int practice_id){

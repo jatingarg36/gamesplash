@@ -12,7 +12,7 @@ public class ConnectionProvider {
         try{
             if(con == null){
                 Class.forName("com.mysql.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gamesplash","root","");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gamesplash?zeroDateTimeBehavior=convertToNull","root","");
                 System.out.println("Connected to sql");
             }
         }catch(ClassNotFoundException | SQLException e){

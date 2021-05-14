@@ -1,9 +1,12 @@
 package client.home.practice;
 
-import client.dialogs.ErrorDialog;
+import client.dialogs.PromptDialog;
 import client.dialogs.WarningDialog;
 import database.ConnectionProvider;
 import database.dao.PracticeDao;
+import database.dao.UserDao;
+import enums.Difficulty;
+import enums.Status;
 import database.models.Users;
 import game.sudoku.SudokuChecker;
 import game.sudoku.SudokuGenerator;
@@ -45,11 +48,12 @@ public class PracticeController {
     private TextField[][] boardField;
     private ConcurrentHashMap<TextField, Boolean> validField;
     private final String selectRCcolor = "#5D5E60";
-    private final ObservableList<String> difficulty = FXCollections.observableArrayList("easy", "medium", "hard");
+    private final ObservableList<Difficulty> difficulty = FXCollections.observableArrayList(Difficulty.EASY, Difficulty.MEDIUM, Difficulty.HARD,Difficulty.EXTREME);
     private Stack<StepLog> stepLogs;
     private boolean gameState; // 1 for running 0 for stopped;
     private Timer timer;
     private PracticeDao practiceDao;
+    private UserDao userDao;
     private int practice_id;
     private Thread query_executor;
     private boolean isAutocomplete;
@@ -58,7 +62,10 @@ public class PracticeController {
     private boolean isColored_Blue = false;
 
     @FXML
-    private ComboBox<String> difficulty_option;
+    private Button start_btn;
+
+    @FXML
+    private ComboBox<Difficulty> difficulty_option;
 
     @FXML
     private Label timeCounter;
@@ -83,7 +90,10 @@ public class PracticeController {
     @FXML
     void initialize() {
         practiceDao = new PracticeDao(ConnectionProvider.getConnection(), users);
+        userDao = new UserDao(ConnectionProvider.getConnection());
         gameState = false;
+        start_btn.setText("Start");
+        start_btn.setStyle("-fx-background-color: #2E82DC; -fx-text-fill:white; -fx-background-radius:8");
         difficulty_option.setItems(difficulty);
         undo_btn.setDisable(true);
         isAutocomplete = false;
@@ -296,15 +306,14 @@ public class PracticeController {
 
     @FXML
     void start_game(ActionEvent event) {
-        Button gameButton = ((Button) event.getSource());
         if (!gameState) {
             try {
                 if (difficulty_option.getValue() == null) {
-                    ErrorDialog errorDialog = new ErrorDialog("Choose Difficulty Level", "to start your game please choose a difficulty level");
-                    errorDialog.start();
+                    PromptDialog promptDialog = new PromptDialog("Choose Difficulty Level", "to start your game please choose a difficulty level");
+                    promptDialog.start();
                 } else {
-                    gameButton.setText("Terminate");
-                    gameButton.setStyle("-fx-background-color: #EF2D2D; -fx-text-fill:white; -fx-background-radius:8");
+                    start_btn.setText("Terminate");
+                    start_btn.setStyle("-fx-background-color: #EF2D2D; -fx-text-fill:white; -fx-background-radius:8");
                     startGame(difficulty_option.getValue());
                 }
             } catch (Exception e) {
@@ -314,8 +323,7 @@ public class PracticeController {
             try {
                 WarningDialog warningDialog = new WarningDialog("Terminate", "Are you sure? Termination of game will not reward any points and your progress in this game will be erased");
                 if (warningDialog.start()) {
-                    gameButton.setText("Start");
-                    gameButton.setStyle("-fx-background-color: #2E82DC; -fx-text-fill:white; -fx-background-radius:8");
+
                     terminateGame();
                 }
             } catch (Exception e) {
@@ -325,7 +333,7 @@ public class PracticeController {
         }
     }
 
-    private void startGame(String difficulty) {
+    private void startGame(Difficulty difficulty) {
         board = new int[9][9];
         solved_board = new int[9][9];
         frequence_board = new int[9][9];
@@ -359,9 +367,9 @@ public class PracticeController {
         gameState = true;
         Timestamp now = new Timestamp(new Date().getTime());
         query_executor = new Thread(() -> {
-            Pair<Boolean, Integer> pair = practiceDao.startPractice(now, difficulty);
-            if (pair.getKey())
-                practice_id = pair.getValue();
+            int practice_id = practiceDao.startPractice(now, difficulty);
+            userDao.setUserStatus(users.getUser_id(), Status.IN_PRACTICE);
+
         }, "query executor");
         query_executor.start();
         startTimer();
@@ -383,6 +391,7 @@ public class PracticeController {
             if (practice_id != 0) {
                 query_executor = new Thread(() -> {
                     practiceDao.cancelPractice(practice_id);
+                    userDao.setUserStatus(users.getUser_id(),Status.AVAILABLE);
                 }, "query executor");
                 query_executor.start();
             }
@@ -410,6 +419,17 @@ public class PracticeController {
                     if (result.getKey()) {
                         stopTimer();
                         int score = calculateResult();
+                        PromptDialog congrats = new PromptDialog("Successful Submission",String.format("***********************************\n" +
+                                "***********************************\n" +
+                                "*******                    ********\n" +
+                                "*******   Congratulation   ********\n" +
+                                "*******                    ********\n" +
+                                "*******    Your Score      ********\n" +
+                                "*******        %03d         ********\n" +
+                                "*******                    ********\n" +
+                                "***********************************\n" +
+                                "***********************************",score));
+                        congrats.start();
                         //show congratulations and result
                         System.out.println("***********************************");
                         System.out.println("***********************************");
@@ -426,9 +446,12 @@ public class PracticeController {
                         query_executor.join();
                         query_executor = new Thread(() -> {
                             practiceDao.submitPractice(practice_id, ended_at, score);
+                            userDao.updateScore(users.getUser_id(),score);
+                            userDao.setUserStatus(users.getUser_id(),Status.AVAILABLE);
                         }, "query executor");
                         query_executor.start();
-
+                        stopTimer();
+                        initialize();
                     } else {
                         scoreTask.deductScore(20);
                         ArrayList<Pair<Integer, Integer>> incorrectInputs = result.getValue();

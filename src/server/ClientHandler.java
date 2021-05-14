@@ -1,11 +1,14 @@
 package server;
 
+import database.models.Matches;
+import database.models.Participants;
 import database.models.Users;
 import javafx.util.Pair;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ClientHandler extends Thread{
@@ -15,20 +18,20 @@ public class ClientHandler extends Thread{
     private ObjectInputStream ois;
     private ConcurrentHashMap<String, Socket> activeUsersList;
     private ConcurrentHashMap<Socket, Pair<ObjectInputStream, ObjectOutputStream>> activeUserStreamList;
+    private ConcurrentHashMap<Matches, ArrayList<Socket>> matchesList;
 
-
-    public ClientHandler(Socket socket, ObjectOutputStream oos, ObjectInputStream ois, ConcurrentHashMap<String, Socket> activeUsersList, ConcurrentHashMap<Socket, Pair<ObjectInputStream, ObjectOutputStream>> activeUserStreamList) {
+    public ClientHandler(Socket socket, ObjectOutputStream oos, ObjectInputStream ois, ConcurrentHashMap<String, Socket> activeUsersList, ConcurrentHashMap<Socket, Pair<ObjectInputStream, ObjectOutputStream>> activeUserStreamList, ConcurrentHashMap<Matches, ArrayList<Socket>> matchesList) {
         this.socket = socket;
         this.oos = oos;
         this.ois = ois;
         this.activeUsersList = activeUsersList;
         this.activeUserStreamList = activeUserStreamList;
+        this.matchesList = matchesList;
     }
 
     @Override
     public void run() {
         Object obj = null;
-        System.out.println("hele");
         try {
             obj = ois.readObject();
             System.out.println(obj);
@@ -41,16 +44,6 @@ public class ClientHandler extends Thread{
             System.out.println(user.getUsername());
             activeUsersList.keySet().forEach((uname) -> {
                 System.out.println("> " + uname);
-//                Socket tmpSocket = activeUsersList.get(uname);
-//                System.out.println(uname+" : "+tmpSocket);
-//                try {
-//                    ObjectOutputStream tmpObj = activeUserStreamList.get(tmpSocket).getValue();
-//                    tmpObj.writeObject(new Notification(user.getUsername(), 2 | 1));
-//                    tmpObj.flush();
-//                    obs.writeObject(new Notification(uname, 2 | 1));
-//                    obs.flush();
-//                } catch (IOException ex) {
-//                }
             });
             activeUsersList.put(user.getUsername(), socket);
             activeUserStreamList.put(socket,new Pair<>(ois, oos));
@@ -59,12 +52,27 @@ public class ClientHandler extends Thread{
 
                 try {
                     obj = ois.readObject();
-                    System.out.println(obj);
-//                    if (obj instanceof Notification) {
-//                        Notification notice = (Notification) obj;
-//                        System.out.println(notice.getUsername() + " : " + notice.getStatus());
-//                    }
+                    System.out.println(obj.getClass());
 
+                    if(obj instanceof Matches){
+                        Matches match = (Matches) obj;
+                        ArrayList<Socket> player_list = new ArrayList<>();
+                        player_list.add(socket);
+                        matchesList.put(match,player_list);
+                    }
+                    else if(obj instanceof Participants){
+                        Participants participants = (Participants) obj;
+                        for (Matches matches : matchesList.keySet()) {
+                            if (matches.getMatch_id() == participants.getMatch_id()) {
+                                System.out.println(participants.getPlayer_id()+" participant add to "+matches.getMatch_id());
+                                matchesList.get(matches).add(socket);
+                                break;
+                            }
+                        }
+                    }
+                    else{
+
+                    }
                 } catch (IOException | ClassNotFoundException ex) {
                     System.out.println("Notification execption " + ex.getLocalizedMessage());
                     break;

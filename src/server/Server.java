@@ -1,5 +1,6 @@
 package server;
 
+import database.models.Matches;
 import javafx.util.Pair;
 
 import java.io.IOException;
@@ -7,11 +8,13 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Server extends Thread{
-    private ConcurrentHashMap<String, Socket> socketsList;
-    private ConcurrentHashMap<Socket, Pair<ObjectInputStream, ObjectOutputStream>> socketStreamList;
+    private final ConcurrentHashMap<String, Socket> socketsList;
+    private final ConcurrentHashMap<Socket, Pair<ObjectInputStream, ObjectOutputStream>> socketStreamList;
+    private final ConcurrentHashMap<Matches, ArrayList<Socket>> matchesList;
 
     private ObjectOutputStream oos;
     private ObjectInputStream ois;
@@ -24,11 +27,15 @@ public class Server extends Thread{
         this.port = port;
         this.socketsList = new ConcurrentHashMap<>();
         this.socketStreamList = new ConcurrentHashMap<>();
+        this.matchesList = new ConcurrentHashMap<>();
         this.isAlive = false;
     }
 
     public void Stop(){
         try{
+            matchesList.clear();
+            socketStreamList.clear();
+            socketsList.clear();
             serverSocket.close();
             isAlive = false;
         } catch (IOException e) {
@@ -51,7 +58,7 @@ public class Server extends Thread{
                 System.out.println("Client added to server"+clientSocket.getRemoteSocketAddress());
                 oos = new ObjectOutputStream(clientSocket.getOutputStream());
                 ois = new ObjectInputStream(clientSocket.getInputStream());
-                new ClientHandler(clientSocket, oos, ois, socketsList, socketStreamList).start();
+                new ClientHandler(clientSocket, oos, ois, socketsList, socketStreamList,matchesList).start();
 
             } catch (IOException e) {
                 e.printStackTrace();

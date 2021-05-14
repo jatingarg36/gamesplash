@@ -1,5 +1,7 @@
 package game.sudoku;
 
+import enums.Difficulty;
+
 public class SudokuGenerator {
 
     private int[][] board;
@@ -18,12 +20,12 @@ public class SudokuGenerator {
         }
     }
 
-    public void setDifficulty(String difficulty) throws NullPointerException {
+    public void setDifficulty(Difficulty difficulty) throws NullPointerException {
         switch (difficulty) {
-            case "medium":
+            case MEDIUM:
                 difficulty_level = 2;
                 break;
-            case "hard":
+            case HARD:
                 difficulty_level = 3;
                 break;
             default:

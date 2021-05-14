@@ -2,16 +2,14 @@ package client.home;
 
 import database.ConnectionProvider;
 import database.dao.UserDao;
+import enums.Status;
 import database.models.Users;
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -48,9 +46,11 @@ public class DashBoard extends Application {
     @Override
     public void stop() throws IOException {
         //close socket
+
         System.out.println("logging out");
         Connection con = ConnectionProvider.getConnection();
         UserDao userDao = new UserDao(con);
+        userDao.setUserStatus(currentUser.getUser_id(), Status.AWAY);
         userDao.logout(currentUser);
         currentSocket.close();
         Platform.exit();

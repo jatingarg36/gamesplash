@@ -2,6 +2,7 @@ package database.dao;
 
 import java.sql.Connection;
 
+import enums.Status;
 import database.models.Users;
 import helper.Encryption;
 
@@ -105,7 +106,7 @@ public class UserDao {
     }
 
     private boolean setUserOnline(String username) {
-        String query = "Update users Set isActive='1', status='1' where username='"+username+"'";
+        String query = "Update users Set isActive='1', status='"+Status.AVAILABLE+"' where username='"+username+"'";
         try{
             PreparedStatement statement = con.prepareStatement(query);
             if(statement.execute())
@@ -117,8 +118,36 @@ public class UserDao {
         return false;
     }
 
-    public boolean setUserStatus(int uid,int status){
+    public boolean setUserStatus(int uid,Status status){
         String query = "update users set status='"+status+"' where user_id='"+uid+"'";
+        try{
+            PreparedStatement statement = con.prepareStatement(query);
+            if(statement.execute()){
+                return true;
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return false;
+    }
+    public Status getUserStatus(String username){
+        Status status = Status.AWAY;
+        String query = "select status from users where username='"+username+"'";
+        try{
+            PreparedStatement statement = con.prepareStatement(query);
+            ResultSet resultSet = statement.executeQuery();
+            if(resultSet.next()){
+                status = Status.valueOf(resultSet.getString("status"));
+            }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return status;
+    }
+
+    public boolean updateScore(int uid,int score){
+        String query = "update users set score= score+'"+score+"' where user_id='"+uid+"'";
         try{
             PreparedStatement statement = con.prepareStatement(query);
             if(statement.execute()){
@@ -153,7 +182,7 @@ public class UserDao {
 
     public void logout(Users users){
         Timestamp timestamp = new Timestamp(new Date().getTime());
-        String query = "Update users Set isActive='0',last_visited='"+timestamp+"' where username='"+users.getUsername()+"'";
+        String query = "Update users Set isActive='0', status='"+ Status.AWAY +"', last_visited='"+timestamp+"' where username='"+users.getUsername()+"'";
         try{
             PreparedStatement statement = con.prepareStatement(query);
             statement.execute();

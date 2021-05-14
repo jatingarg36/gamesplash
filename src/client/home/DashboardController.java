@@ -101,11 +101,28 @@ public class DashboardController {
 
     @FXML
     void initialize() {
-        this.activeBtn = profile_btn;
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("profile/profile.fxml"));
-        if (profileController == null)
-            profileController = new ProfileController(user,socket);
-        loader.setController(profileController);
+//        this.activeBtn = profile_btn;
+//        FXMLLoader loader = new FXMLLoader(getClass().getResource("profile/profile.fxml"));
+//        if (profileController == null)
+//            profileController = new ProfileController(user,socket);
+//        loader.setController(profileController);
+//        try {
+//            contentSection.getChildren().clear();
+//            AnchorPane parent = loader.load();
+//            AnchorPane.setBottomAnchor(parent,0.0);
+//            AnchorPane.setLeftAnchor(parent,0.0);
+//            AnchorPane.setRightAnchor(parent,0.0);
+//            AnchorPane.setTopAnchor(parent,0.0);
+//            contentSection.getChildren().add(parent);
+//            System.out.println(contentSection.getChildren().stream().count());
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+        this.activeBtn = challenge_btn;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("challenge/challenge.fxml"));
+        if (challengeController == null)
+            challengeController = new ChallengeController(user,socket,ois,oos);
+        loader.setController(challengeController);
         try {
             contentSection.getChildren().clear();
             AnchorPane parent = loader.load();
@@ -154,7 +171,7 @@ public class DashboardController {
             this.activeBtn = challenge_btn;
             loader = new FXMLLoader(getClass().getResource("challenge/challenge.fxml"));
             if (challengeController == null)
-                challengeController = new ChallengeController();
+                challengeController = new ChallengeController(user,socket,ois,oos);
             loader.setController(challengeController);
         } else if (chatroom_btn.equals(selected)) {
             this.activeBtn = chatroom_btn;
