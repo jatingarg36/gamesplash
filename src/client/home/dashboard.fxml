@@ -26,7 +26,7 @@
                         <Insets bottom="20.0" />
                      </VBox.margin>
                   </Label>
-                  <Button fx:id="profile_btn" alignment="BASELINE_LEFT" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseEntered="#hoverEnter" onMouseExited="#hoverExit" onMousePressed="#selectOption" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: #131314; -fx-background-radius: 0; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);" text="Profile" textFill="WHITE">
+                  <Button fx:id="profile_btn" alignment="BASELINE_LEFT" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseEntered="#hoverEnter" onMouseExited="#hoverExit" onMousePressed="#selectOption" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-background-radius: 0;" text="Profile" textFill="WHITE">
                      <padding>
                         <Insets bottom="15.0" left="30.0" right="10.0" top="15.0" />
                      </padding>
@@ -57,7 +57,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="live_btn" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseEntered="#hoverEnter" onMouseExited="#hoverExit" onMousePressed="#selectOption" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-background-radius: 0;" text="Live Games" textFill="WHITE">
+                  <Button fx:id="live_btn" alignment="BASELINE_LEFT" disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseEntered="#hoverEnter" onMouseExited="#hoverExit" onMousePressed="#selectOption" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-background-radius: 0;" text="Live Games" textFill="WHITE">
                      <padding>
                         <Insets bottom="15.0" left="30.0" right="10.0" top="15.0" />
                      </padding>

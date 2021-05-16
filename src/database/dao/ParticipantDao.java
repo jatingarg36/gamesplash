@@ -1,6 +1,7 @@
 package database.dao;
 
 import database.models.Participants;
+import enums.Participant_State;
 
 import java.sql.*;
 
@@ -24,6 +25,7 @@ public class ParticipantDao {
                 participants.setHasLeft(false);
                 participants.setMatch_id(match_id);
                 participants.setPlayer_id(player_id);
+                participants.setState(Participant_State.NOT_READY);
                 participants.setScore(0);
                 participants.setRank(0);
             }
@@ -33,6 +35,18 @@ public class ParticipantDao {
         }
 
         return participants;
+    }
+    public boolean setState(int participation_id, Participant_State state){
+        String query = "Update participants set state='"+state+"' where participation_id='"+participation_id+"'";
+        try{
+            PreparedStatement statement = connection.prepareStatement(query);
+            if( statement.executeUpdate()==1)
+                return true;
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return false;
     }
 
 }

@@ -66,6 +66,7 @@ CREATE TABLE participants(
     duration TIME DEFAULT 0, -- ( 0 for leaving in between or not completing )
     rank int,   -- ( null for leaving in between or not completing )
     score int NOT NULL DEFAULT 0,
+    state enum('READY','LEFT','NOT_READY','SUBMITTED') NOT NULL default 'NOT_READY',
     PRIMARY KEY(participation_id),
     FOREIGN KEY(match_id) REFERENCES matches(match_id),
     FOREIGN KEY(player_id) REFERENCES users(user_id),

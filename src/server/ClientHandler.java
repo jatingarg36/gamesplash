@@ -1,8 +1,9 @@
 package server;
 
-import database.models.Matches;
-import database.models.Participants;
-import database.models.Users;
+import database.models.*;
+import enums.Message_Type;
+import enums.NotificationType;
+import enums.Participant_State;
 import javafx.util.Pair;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -13,20 +14,23 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class ClientHandler extends Thread{
 
-    private Socket socket;
-    private ObjectOutputStream oos;
-    private ObjectInputStream ois;
-    private ConcurrentHashMap<String, Socket> activeUsersList;
+    private final Socket socket;
+    private final ObjectOutputStream oos;
+    private final ObjectInputStream ois;
+    private ConcurrentHashMap<Socket,Users> usersList;
+    private ConcurrentHashMap<Integer, Socket> activeUsersList;
     private ConcurrentHashMap<Socket, Pair<ObjectInputStream, ObjectOutputStream>> activeUserStreamList;
-    private ConcurrentHashMap<Matches, ArrayList<Socket>> matchesList;
-
-    public ClientHandler(Socket socket, ObjectOutputStream oos, ObjectInputStream ois, ConcurrentHashMap<String, Socket> activeUsersList, ConcurrentHashMap<Socket, Pair<ObjectInputStream, ObjectOutputStream>> activeUserStreamList, ConcurrentHashMap<Matches, ArrayList<Socket>> matchesList) {
+    private ConcurrentHashMap<Integer, ArrayList<Pair<Socket,Participants>>> matchesList;
+    private Pair<Socket,Participants> socketParticipantsPair;
+    private Participants participant;
+    public ClientHandler(Socket socket, ObjectOutputStream oos, ObjectInputStream ois, ConcurrentHashMap<Integer, Socket> activeUsersList, ConcurrentHashMap<Socket, Pair<ObjectInputStream, ObjectOutputStream>> activeUserStreamList, ConcurrentHashMap<Integer, ArrayList<Pair<Socket,Participants>>> matchesList,ConcurrentHashMap<Socket,Users> usersList) {
         this.socket = socket;
         this.oos = oos;
         this.ois = ois;
         this.activeUsersList = activeUsersList;
         this.activeUserStreamList = activeUserStreamList;
         this.matchesList = matchesList;
+        this.usersList = usersList;
     }
 
     @Override
@@ -45,39 +49,101 @@ public class ClientHandler extends Thread{
             activeUsersList.keySet().forEach((uname) -> {
                 System.out.println("> " + uname);
             });
-            activeUsersList.put(user.getUsername(), socket);
+            usersList.put(socket,user);
+            activeUsersList.put(user.getUser_id(), socket);
             activeUserStreamList.put(socket,new Pair<>(ois, oos));
 
             while (true) {
-
                 try {
                     obj = ois.readObject();
                     System.out.println(obj.getClass());
 
                     if(obj instanceof Matches){
                         Matches match = (Matches) obj;
-                        ArrayList<Socket> player_list = new ArrayList<>();
-                        player_list.add(socket);
-                        matchesList.put(match,player_list);
+                        ArrayList<Pair<Socket,Participants>> player_list = new ArrayList<>();
+                        matchesList.put(match.getMatch_id(),player_list);
+
                     }
                     else if(obj instanceof Participants){
                         Participants participants = (Participants) obj;
-                        for (Matches matches : matchesList.keySet()) {
-                            if (matches.getMatch_id() == participants.getMatch_id()) {
-                                System.out.println(participants.getPlayer_id()+" participant add to "+matches.getMatch_id());
-                                matchesList.get(matches).add(socket);
-                                break;
+                        System.out.println(participants.getState());
+                        if(participant == null){
+                            System.out.println("Participant: "+participants.getPlayer_id()+" entered for match: "+participants.getMatch_id());
+                            this.participant = participants;
+                            this.socketParticipantsPair = new Pair<>(socket,participants);
+                            matchesList.get(participants.getMatch_id()).add(socketParticipantsPair);
+
+                            // sending notification to all other sockets in match that the following player has joined
+                            ArrayList<Pair<Socket,Participants>> ar = matchesList.get(participants.getMatch_id());
+                            for(Pair<Socket,Participants> pair:ar){
+                                if(pair.getValue().getPlayer_id() != participant.getPlayer_id()){
+                                    Pair<ObjectInputStream, ObjectOutputStream> pos = activeUserStreamList.get(pair.getKey());
+                                    try {
+                                        pos.getValue().reset();
+                                        pos.getValue().flush();
+                                        pos.getValue().writeObject(new SystemNotification(NotificationType.PLAYER_JOINED,usersList.get(socket).getUsername()));
+                                        oos.reset();
+                                        oos.flush();
+                                        oos.writeObject(new SystemNotification(NotificationType.PLAYER_JOINED,usersList.get(pair.getKey()).getUsername()));
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            }
+                            oos.reset();
+                            oos.flush();
+                            oos.writeObject(new SystemNotification(NotificationType.PLAYER_JOINED,usersList.get(socket).getUsername()));
+                        }
+                        else if(participants.getState() == Participant_State.READY){
+                            System.out.println("Participant is ready: "+participants.getPlayer_id()+"; for match: "+participants.getMatch_id());
+                            int index = matchesList.get(participants.getMatch_id()).indexOf(socketParticipantsPair);
+                            participant.setState(participants.getState());
+                            socketParticipantsPair = new Pair<>(socket,participants);
+                            matchesList.get(participants.getMatch_id()).set(index,socketParticipantsPair);
+                            ArrayList<Pair<Socket,Participants>> ar = matchesList.get(participants.getMatch_id());
+                            boolean allReady=true;
+                            for(Pair<Socket,Participants> pair:ar){
+                                if(pair.getValue().getState()!=Participant_State.READY){
+                                    allReady = false;
+                                    break;
+                                }
+                            }
+                            if(allReady){
+                                for (Pair<Socket, Participants> sk : ar) {
+                                    Pair<ObjectInputStream, ObjectOutputStream> pos = activeUserStreamList.get(sk.getKey());
+                                    try {
+                                        pos.getValue().writeObject(new SystemNotification(NotificationType.START_MATCH));
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    else if(obj instanceof Message){
+                        Message message = (Message) obj;
+                        if(message.getMessage_type() == Message_Type.FOR_MATCH){
+                            int match_id = message.getReceiver_id();
+                            ArrayList<Pair<Socket,Participants>> ar  = matchesList.get(match_id);
+                            for(Pair<Socket,Participants> pair: ar){
+                                if(!usersList.get(pair.getKey()).getUsername().equals(message.getSender_username())){
+                                    Pair<ObjectInputStream,ObjectOutputStream> pos = activeUserStreamList.get(pair.getKey());
+                                    pos.getValue().reset();
+                                    pos.getValue().flush();
+                                    pos.getValue().writeObject(message);
+                                }
                             }
                         }
                     }
                     else{
-
+                        System.out.println("unidentified instance of object");
                     }
                 } catch (IOException | ClassNotFoundException ex) {
                     System.out.println("Notification execption " + ex.getLocalizedMessage());
                     break;
                 }
             }
+
 
         }
         else{

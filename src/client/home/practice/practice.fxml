@@ -33,7 +33,7 @@
                       </Label>
                   </top>
                   <center>
-                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="450.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="460.0" BorderPane.alignment="CENTER">
                      <children>
                         <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <center>
@@ -1154,7 +1154,7 @@
                               <Font name="Raleway SemiBold" size="12.0" />
                            </font>
                         </Label>
-                        <ComboBox fx:id="difficulty_option" layoutX="87.0" layoutY="131.0" promptText="Choose Difficulty" style="-fx-background-color: white; -fx-color-fill: white;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
+                        <ComboBox fx:id="difficulty_option" layoutX="87.0" layoutY="131.0" promptText="Choose Difficulty" style="-fx-background-color: white; -fx-color-fill: white; -fx-font: 15 &quot;Raleway SemiBold&quot;;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>

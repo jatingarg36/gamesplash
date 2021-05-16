@@ -19,6 +19,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -29,6 +30,10 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 
 public class DashboardController {
     private final Users user;
@@ -37,6 +42,10 @@ public class DashboardController {
     private ObjectInputStream ois;
     private OutputHandler outputHandler;
     private InputHandler inputHandler;
+
+    private ArrayList<FXMLLoader> fxmlList;
+    private ArrayList<Parent> list;
+
 
     public DashboardController(Users user, Socket socket) {
         this.user = user;
@@ -101,37 +110,46 @@ public class DashboardController {
 
     @FXML
     void initialize() {
-//        this.activeBtn = profile_btn;
-//        FXMLLoader loader = new FXMLLoader(getClass().getResource("profile/profile.fxml"));
-//        if (profileController == null)
-//            profileController = new ProfileController(user,socket);
-//        loader.setController(profileController);
-//        try {
-//            contentSection.getChildren().clear();
-//            AnchorPane parent = loader.load();
-//            AnchorPane.setBottomAnchor(parent,0.0);
-//            AnchorPane.setLeftAnchor(parent,0.0);
-//            AnchorPane.setRightAnchor(parent,0.0);
-//            AnchorPane.setTopAnchor(parent,0.0);
-//            contentSection.getChildren().add(parent);
-//            System.out.println(contentSection.getChildren().stream().count());
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        list = new ArrayList<>();
+        for(int i=0;i<8;i++){
+            list.add(new AnchorPane());
+        }
+        fxmlList = new ArrayList<>();
+
+        fxmlList.add(0, new FXMLLoader(getClass().getResource("profile/profile.fxml")));
+
+        fxmlList.add(1, new FXMLLoader(getClass().getResource("practice/practice.fxml")));
+
+        fxmlList.add(2, new FXMLLoader(getClass().getResource("leaderboard/leaderboard.fxml")));
+
+        fxmlList.add(3, new FXMLLoader(getClass().getResource("livegames/livegame.fxml")));
+
+        fxmlList.add(4, new FXMLLoader(getClass().getResource("challenge/challenge.fxml")));
+
+        fxmlList.add(5, new FXMLLoader(getClass().getResource("chatroom/chatroom.fxml")));
+
+        fxmlList.add(6, new FXMLLoader(getClass().getResource("setting/setting.fxml")));
+
+        fxmlList.add(7, new FXMLLoader(getClass().getResource("helpcenter/helpcenter.fxml")));
+
+        System.out.println(fxmlList.size());
+
         this.activeBtn = challenge_btn;
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("challenge/challenge.fxml"));
-        if (challengeController == null)
-            challengeController = new ChallengeController(user,socket,ois,oos);
-        loader.setController(challengeController);
+        activeBtn.setStyle("-fx-background-color:#131314 ; -fx-background-radius:0; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);");
+
+        challengeController = new ChallengeController(user, socket, ois, oos);
+        fxmlList.get(4).setController(challengeController);
+        inputHandler.setChallengeController(challengeController);
         try {
+            list.set(4,fxmlList.get(4).load());
             contentSection.getChildren().clear();
-            AnchorPane parent = loader.load();
-            AnchorPane.setBottomAnchor(parent,0.0);
-            AnchorPane.setLeftAnchor(parent,0.0);
-            AnchorPane.setRightAnchor(parent,0.0);
-            AnchorPane.setTopAnchor(parent,0.0);
+            AnchorPane parent = (AnchorPane) list.get(4);
+            AnchorPane.setBottomAnchor(parent, 0.0);
+            AnchorPane.setLeftAnchor(parent, 0.0);
+            AnchorPane.setRightAnchor(parent, 0.0);
+            AnchorPane.setTopAnchor(parent, 0.0);
             contentSection.getChildren().add(parent);
-            System.out.println(contentSection.getChildren().stream().count());
+            System.out.println(contentSection.getChildren());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -143,65 +161,76 @@ public class DashboardController {
         activeBtn.setStyle("-fx-background-color: transparent; -fx-background-radius:0");
         Button selected = (Button) e.getSource();
         FXMLLoader loader = null;
+        int i = 0;
         if (profile_btn.equals(selected)) {
+            i = 0;
             this.activeBtn = profile_btn;
-            loader = new FXMLLoader(getClass().getResource("profile/profile.fxml"));
-            if (profileController == null)
-                profileController = new ProfileController(user,socket);
-            loader.setController(profileController);
+            if (fxmlList.get(i).getController() == null) {
+                fxmlList.get(i).setController(new ProfileController(user, socket));
+                list.set(i,fxmlList.get(i).load());
+                
+            }
         } else if (practice_btn.equals(selected)) {
+            i = 1;
             this.activeBtn = practice_btn;
-            loader = new FXMLLoader(getClass().getResource("practice/practice.fxml"));
-            if (practiceController == null)
-                practiceController = new PracticeController(user,socket);
-            loader.setController(practiceController);
+            if (fxmlList.get(i).getController() == null) {
+                fxmlList.get(i).setController( new PracticeController(user, socket));
+                list.set(i,fxmlList.get(i).load());
+            }
         } else if (leaderboard_btn.equals(selected)) {
+            i = 2;
             this.activeBtn = leaderboard_btn;
-            loader = new FXMLLoader(getClass().getResource("leaderboard/leaderboard.fxml"));
-            if (practiceController == null)
-                leaderboardController = new LeaderboardController();
-            loader.setController(leaderboardController);
+            if (fxmlList.get(i).getController() == null) {
+                fxmlList.get(i).setController(new LeaderboardController());
+                list.set(i,fxmlList.get(i).load());
+            }
         } else if (live_btn.equals(selected)) {
+            i = 3;
             this.activeBtn = live_btn;
-            loader = new FXMLLoader(getClass().getResource("livegames/livegame.fxml"));
-            if (liveGameController == null)
-                liveGameController = new LiveGameController();
-            loader.setController(liveGameController);
+            if (fxmlList.get(i).getController() == null) {
+                fxmlList.get(i).setController(new ProfileController(user, socket));
+                list.set(i,fxmlList.get(i).load());
+            }
         } else if (challenge_btn.equals(selected)) {
+            i = 4;
             this.activeBtn = challenge_btn;
-            loader = new FXMLLoader(getClass().getResource("challenge/challenge.fxml"));
-            if (challengeController == null)
-                challengeController = new ChallengeController(user,socket,ois,oos);
-            loader.setController(challengeController);
+            if (fxmlList.get(i).getController() == null) {
+                fxmlList.get(i).setController(new ChallengeController(user, socket, ois, oos));
+                list.set(i,fxmlList.get(i).load());
+            }
         } else if (chatroom_btn.equals(selected)) {
+            i = 5;
             this.activeBtn = chatroom_btn;
-            loader = new FXMLLoader(getClass().getResource("chatroom/chatroom.fxml"));
-            if (chatroomController == null)
-                chatroomController = new ChatroomController();
-            loader.setController(chatroomController);
+            if (fxmlList.get(i).getController() == null) {
+                fxmlList.get(i).setController(new ChatroomController());
+                list.set(i,fxmlList.get(i).load());
+            }
         } else if (setting_btn.equals(selected)) {
+            i = 6;
             this.activeBtn = setting_btn;
-            loader = new FXMLLoader(getClass().getResource("setting/setting.fxml"));
-            if (settingController == null)
-                settingController = new SettingController();
-            loader.setController(settingController);
+            if (fxmlList.get(i).getController() == null) {
+                fxmlList.get(i).setController(new SettingController());
+                list.set(i,fxmlList.get(i).load());
+            }
         } else if (helpcenter_btn.equals(selected)) {
+            i = 7;
             this.activeBtn = helpcenter_btn;
-            loader = new FXMLLoader(getClass().getResource("helpcenter/helpcenter.fxml"));
-            if (helpcenterController == null)
-                helpcenterController = new HelpcenterController();
-            loader.setController(helpcenterController);
+            if (fxmlList.get(i).getController() == null) {
+                fxmlList.get(i).setController(new HelpcenterController());
+                list.set(i,fxmlList.get(i).load());
+            }
         }
 
-        if (loader != null) {
+        if (fxmlList.get(i) != null) {
             contentSection.getChildren().clear();
-            AnchorPane parent = loader.load();
-            AnchorPane.setBottomAnchor(parent,0.0);
-            AnchorPane.setLeftAnchor(parent,0.0);
-            AnchorPane.setRightAnchor(parent,0.0);
-            AnchorPane.setTopAnchor(parent,0.0);
+
+            AnchorPane parent = (AnchorPane) list.get(i);
+            AnchorPane.setBottomAnchor(parent, 0.0);
+            AnchorPane.setLeftAnchor(parent, 0.0);
+            AnchorPane.setRightAnchor(parent, 0.0);
+            AnchorPane.setTopAnchor(parent, 0.0);
             contentSection.getChildren().add(parent);
-            System.out.println(contentSection.getChildren().stream().count());
+            System.out.println(contentSection.getChildren());
         }
         activeBtn.setStyle("-fx-background-color:#131314 ; -fx-background-radius:0; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);");
     }
@@ -231,8 +260,6 @@ public class DashboardController {
         socket.close();
         new AuthScreen().start(new Stage());
     }
-
-
 
 
 }

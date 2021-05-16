@@ -1,19 +1,32 @@
 package database.models;
 
+import enums.Participant_State;
+
 import java.io.Serializable;
 import java.sql.Time;
 
 public class Participants implements Serializable {
-    private  int participation_id;
+    private int participation_id;
     private int match_id;
     private int player_id;
     private boolean hasLeft;
     private Time duration;
     private int rank;
     private int score;
+    private Participant_State state;
 
     public Participants() {
     }
+
+
+    public Participant_State getState() {
+        return state;
+    }
+
+    public void setState(Participant_State state) {
+        this.state = state;
+    }
+
 
     public int getParticipation_id() {
         return participation_id;
